@@ -334,19 +334,19 @@
                             <Border Grid.Row="1" Grid.Column="1" Margin="5" BorderBrush="Black" BorderThickness="3" Background="LightBlue">
                                 <TextBlock Name="Answer4" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" FontFamily="Comic Sans MS" FontSize="40" FontWeight="ExtraBold"/>
                             </Border>-->
-                    <Button Name="Answer1" Grid.Row="0" Grid.Column="0" DataContext="{Binding Answer1}" Content="{Binding}" cal:Message.Attach="SelectAnswer($datacontext)" Style="{StaticResource AnsweButtonStyle}" RenderTransformOrigin="0.5,0.5">
-                    	<Button.RenderTransform>
-                    		<CompositeTransform/>
+                    <Button Grid.Row="0" Grid.Column="0" DataContext="{Binding Answer1}" Content="{Binding}" cal:Message.Attach="SelectAnswer($datacontext)" Style="{StaticResource AnsweButtonStyle}" RenderTransformOrigin="0.5,0.5">
+                    	<Button.RenderTransform>                                                    
+                    		<CompositeTransform/>                                                   
                     	</Button.RenderTransform></Button>
-                    <Button Name="Answer2" Grid.Row="0" Grid.Column="1" DataContext="{Binding Answer2}" Content="{Binding}" cal:Message.Attach="SelectAnswer($datacontext)" Style="{StaticResource AnsweButtonStyle}" RenderTransformOrigin="0.5,0.5">
-                    	<Button.RenderTransform>
-                    		<CompositeTransform/>
+                    <Button Grid.Row="0" Grid.Column="1" DataContext="{Binding Answer2}" Content="{Binding}" cal:Message.Attach="SelectAnswer($datacontext)" Style="{StaticResource AnsweButtonStyle}" RenderTransformOrigin="0.5,0.5">
+                    	<Button.RenderTransform>                                                    
+                    		<CompositeTransform/>                                                   
                     	</Button.RenderTransform></Button>
-                    <Button Name="Answer3" Grid.Row="1" Grid.Column="0" DataContext="{Binding Answer3}" Content="{Binding}" cal:Message.Attach="SelectAnswer($datacontext)" Style="{StaticResource AnsweButtonStyle}" RenderTransformOrigin="0.5,0.5">
-                    	<Button.RenderTransform>
-                    		<CompositeTransform/>
+                    <Button Grid.Row="1" Grid.Column="0" DataContext="{Binding Answer3}" Content="{Binding}" cal:Message.Attach="SelectAnswer($datacontext)" Style="{StaticResource AnsweButtonStyle}" RenderTransformOrigin="0.5,0.5">
+                    	<Button.RenderTransform>                                                    
+                    		<CompositeTransform/>                                                   
                     	</Button.RenderTransform></Button>
-                    <Button Name="Answer4" Grid.Row="1" Grid.Column="1" DataContext="{Binding Answer4}" Content="{Binding}" cal:Message.Attach="SelectAnswer($datacontext)" Style="{StaticResource AnsweButtonStyle}" RenderTransformOrigin="0.5,0.5">
+                    <Button Grid.Row="1" Grid.Column="1" DataContext="{Binding Answer4}" Content="{Binding}" cal:Message.Attach="SelectAnswer($datacontext)" Style="{StaticResource AnsweButtonStyle}" RenderTransformOrigin="0.5,0.5">
                     	<Button.RenderTransform>
                     		<CompositeTransform/>
                     	</Button.RenderTransform></Button>
