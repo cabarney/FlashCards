@@ -1,4 +1,5 @@
 ﻿using System;
+using Windows.UI.Xaml;
 using Caliburn.Micro;
 using FlashCards.Data;
 using FlashCards.Model;
@@ -181,9 +182,9 @@ namespace FlashCards.ViewModels
             NotifyOfPropertyChange(() => AddAChild);
         }
 
-        public IEnumerable<IResult> SizeChanged()
+        public IEnumerable<IResult> SizeChanged(FrameworkElement e)
         {
-            yield return new VisualStateResult(ApplicationView.Value.ToString(), true);
+            yield return new VisualStateResult(e.ActualWidth < 650 ? "Paused" : "Running", true);
         }
 
         public override bool CanGoBack

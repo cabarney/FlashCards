@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using Windows.UI.Xaml;
 using Caliburn.Micro;
 using FlashCards.Data;
 using FlashCards.Extensions;
@@ -322,9 +323,9 @@ namespace FlashCards.ViewModels
             if (handler != null) handler(this, new DataErrorsChangedEventArgs(propertyName));
         }
 
-        public IEnumerable<IResult> SizeChanged()
+        public IEnumerable<IResult> SizeChanged(FrameworkElement e)
         {
-            yield return new VisualStateResult(ApplicationView.Value.ToString(), true);
+            yield return new VisualStateResult(e.ActualWidth < 650 ? "Paused" : "Running", true);
         }
     }
 }

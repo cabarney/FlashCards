@@ -2,7 +2,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:cal="using:Caliburn.Micro"
       xmlns:views="using:FlashCards.Views" xmlns:FlashCards="using:FlashCards" mc:Ignorable="d"
-      cal:Message.Attach="[Event SizeChanged] = [Action SizeChanged]">
+      cal:Message.Attach="[Event SizeChanged] = [Action SizeChanged($source)]">
     <Page.Resources>
         <CollectionViewSource x:Name="groupedItemsViewSource" Source="{Binding Groups}" IsSourceGrouped="true"
                               ItemsPath="TopItems" />
@@ -78,11 +78,10 @@
 
             <!-- Visual states reflect the application's view state -->
             <VisualStateGroup x:Name="ApplicationViewStates">
-                <VisualState x:Name="FullScreenLandscape" />
-                <VisualState x:Name="Filled" />
+
 
                 <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
-                <VisualState x:Name="FullScreenPortrait">
+                <VisualState x:Name="Running">
                     <Storyboard>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemGridView"
                                                            Storyboard.TargetProperty="Padding">
@@ -90,7 +89,7 @@
                         </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
-                <VisualState x:Name="Snapped">
+                <VisualState x:Name="Paused">
                     <Storyboard>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PausedScreen"
                                                            Storyboard.TargetProperty="Visibility">

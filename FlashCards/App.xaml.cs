@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Caliburn.Micro;
 using FlashCards.Data;
@@ -28,9 +29,10 @@ namespace FlashCards
         {
             base.Configure();
 
+            LogManager.GetLog = x => new Logger();
+
             _container = new WinRTContainer();
             _container.RegisterWinRTServices();
-            
 
             _container.RegisterPerRequest(typeof(IUserRepository),"", typeof(UserRepository));
             _container.RegisterPerRequest(typeof(IDeckRepository),"", typeof(DeckRepository));
@@ -164,5 +166,24 @@ namespace FlashCards
             DisplayRootView<MainView>();
         }
 
+    }
+
+
+    public class Logger : ILog
+    {
+        public void Info(string format, params object[] args)
+        {
+            Debug.WriteLine("INFO: " + format, args);
+        }
+
+        public void Warn(string format, params object[] args)
+        {
+            Debug.WriteLine("WARNING: " + format, args);
+        }
+
+        public void Error(Exception exception)
+        {
+            Debug.WriteLine("ERROR: "+ exception.ToString());
+        }
     }
 }

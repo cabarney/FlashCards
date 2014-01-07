@@ -46,18 +46,18 @@ namespace FlashCards.ViewModels
                     break;
             }
             
-            yield return new ControlVisualStateResult("AnswerChosen", "Answer"+idx, !_isTimed);
+            yield return new ControlVisualStateResult("AnswerChosen", "_Answer"+idx, !_isTimed);
             for (int i = 1; i <= 4; i++ )
                 if(idx != i)
-                    yield return new ControlVisualStateResult("AnswerHidden", "Answer" + i, !_isTimed);
+                    yield return new ControlVisualStateResult("AnswerHidden", "_Answer" + i, !_isTimed);
             yield return new VisualStateResult("Selected", !_isTimed);
             if (!_isTimed) yield return new DelayResult(1000);
             yield return new VisualStateResult("BackVisible", !_isTimed);
             if (!_isTimed) yield return new DelayResult(1000);
             if(answer == Card.MathFact.Resultant)
-                yield return new ControlVisualStateResult("AnswerCorrect", "Answer" + idx, !_isTimed);
+                yield return new ControlVisualStateResult("AnswerCorrect", "_Answer" + idx, !_isTimed);
             else
-                yield return new ControlVisualStateResult("AnswerIncorrect", "Answer" + idx, !_isTimed);
+                yield return new ControlVisualStateResult("AnswerIncorrect", "_Answer" + idx, !_isTimed);
 
             _events.Publish(new AnswerChosenMessage(answer));
         }

@@ -5,7 +5,7 @@
     xmlns:local="using:FlashCards.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:FlashCards="using:FlashCards"
-    xmlns:cal="using:Caliburn.Micro" cal:Message.Attach="[Event SizeChanged] = [Action SizeChanged]"
+    xmlns:cal="using:Caliburn.Micro" cal:Message.Attach="[Event SizeChanged] = [Action SizeChanged($source)]"
     mc:Ignorable="d">
 	<Page.Resources>
 		<Style x:Key="AnswerListBoxTemplate" TargetType="ListBox">
@@ -173,9 +173,9 @@
         <Grid x:Name="MainContent">
         
             <Grid.ColumnDefinitions>
-    		<ColumnDefinition Width="250*"/>
-    		<ColumnDefinition Width="899*"/>
-    		<ColumnDefinition Width="250*"/>
+    		<ColumnDefinition Width="150"/>
+    		<ColumnDefinition Width="*"/>
+    		<ColumnDefinition Width="150"/>
     	</Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
@@ -217,19 +217,18 @@
         <VisualStateManager.VisualStateGroups>
             <!-- Visual states reflect the application's view state -->
             <VisualStateGroup x:Name="ApplicationViewStates">
-                <VisualState x:Name="FullScreenLandscape" />
-                <VisualState x:Name="Filled" />
+                <VisualState x:Name="Running" />
 
                 <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
-                <VisualState x:Name="FullScreenPortrait">
+                <!--<VisualState x:Name="FullScreenPortrait">
                     <Storyboard>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemGridView"
-                                                           Storyboard.TargetProperty="Padding">
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MainContent"
+                                                           Storyboard.TargetProperty="Margin">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="96,137,10,56" />
                         </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
-                </VisualState>
-                <VisualState x:Name="Snapped">
+                </VisualState>-->
+                <VisualState x:Name="Paused">
                     <Storyboard>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PausedScreen"
                                                            Storyboard.TargetProperty="Visibility">

@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:cal="using:Caliburn.Micro" xmlns:FlashCards="using:FlashCards"
-    cal:Message.Attach="[Event SizeChanged] = [Action SizeChanged]"
+    cal:Message.Attach="[Event SizeChanged] = [Action SizeChanged($source)]"
     mc:Ignorable="d">
     <Page.Resources>
         <DataTemplate x:Key="intTemplate">
@@ -96,19 +96,11 @@
         <VisualStateManager.VisualStateGroups>
             <!-- Visual states reflect the application's view state -->
             <VisualStateGroup x:Name="ApplicationViewStates">
-                <VisualState x:Name="FullScreenLandscape" />
-                <VisualState x:Name="Filled" />
+
 
                 <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
-                <VisualState x:Name="FullScreenPortrait">
-                    <Storyboard>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemGridView"
-                                                           Storyboard.TargetProperty="Padding">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="96,137,10,56" />
-                        </ObjectAnimationUsingKeyFrames>
-                    </Storyboard>
-                </VisualState>
-                <VisualState x:Name="Snapped">
+                <VisualState x:Name="Running" />
+                <VisualState x:Name="Paused">
                     <Storyboard>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PausedScreen"
                                                            Storyboard.TargetProperty="Visibility">

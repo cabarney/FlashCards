@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Core;
+using Windows.UI.Xaml;
 using Caliburn.Micro;
 using FlashCards.Data;
 using FlashCards.Extensions;
@@ -282,15 +284,13 @@ namespace FlashCards.ViewModels
         // Navigation Parameter
         public int Parameter { get; set; }
 
-        public IEnumerable<IResult> SizeChanged()
+        public IEnumerable<IResult> SizeChanged(FrameworkElement e)
         {
-            if(ApplicationView.Value == ApplicationViewState.Snapped)
+            if(e.ActualWidth < 650)
                 StopTimer();
             else
                 StartTimer();
-            yield return new VisualStateResult(ApplicationView.Value.ToString(), true);
+            yield return new VisualStateResult(e.ActualWidth<650 ? "Paused" : "Running", true);
         }
-
-
     }
 }
