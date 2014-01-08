@@ -28,7 +28,6 @@
     <Language Code="ar-ye" InMinimumRequirementSet="true" />
     <Language Code="as" InMinimumRequirementSet="false" />
     <Language Code="as-in" InMinimumRequirementSet="false" />
-    <Language Code="az" InMinimumRequirementSet="false" />
     <Language Code="az-arab" InMinimumRequirementSet="false" />
     <Language Code="az-arab-az" InMinimumRequirementSet="false" />
     <Language Code="az-cyrl" InMinimumRequirementSet="false" />
@@ -68,6 +67,12 @@
     <Language Code="el" InMinimumRequirementSet="true" />
     <Language Code="el-gr" InMinimumRequirementSet="true" />
     <Language Code="en" InMinimumRequirementSet="true" />
+    <Language Code="en-011" InMinimumRequirementSet="true" />
+    <Language Code="en-014" InMinimumRequirementSet="true" />
+    <Language Code="en-018" InMinimumRequirementSet="true" />
+    <Language Code="en-021" InMinimumRequirementSet="true" />
+    <Language Code="en-029" InMinimumRequirementSet="true" />
+    <Language Code="en-053" InMinimumRequirementSet="true" />
     <Language Code="en-au" InMinimumRequirementSet="true" />
     <Language Code="en-bz" InMinimumRequirementSet="true" />
     <Language Code="en-ca" InMinimumRequirementSet="true" />
@@ -89,6 +94,8 @@
     <Language Code="en-vn" InMinimumRequirementSet="true" />
     <Language Code="en-za" InMinimumRequirementSet="true" />
     <Language Code="es" InMinimumRequirementSet="true" />
+    <Language Code="es-019" InMinimumRequirementSet="true" />
+    <Language Code="es-419" InMinimumRequirementSet="true" />
     <Language Code="es-ar" InMinimumRequirementSet="true" />
     <Language Code="es-bo" InMinimumRequirementSet="true" />
     <Language Code="es-cl" InMinimumRequirementSet="true" />
@@ -121,7 +128,11 @@
     <Language Code="fil-latn" InMinimumRequirementSet="false" />
     <Language Code="fil-ph" InMinimumRequirementSet="false" />
     <Language Code="fr" InMinimumRequirementSet="true" />
+    <Language Code="fr-011" InMinimumRequirementSet="true" />
     <Language Code="fr-015" InMinimumRequirementSet="true" />
+    <Language Code="fr-021" InMinimumRequirementSet="true" />
+    <Language Code="fr-029" InMinimumRequirementSet="true" />
+    <Language Code="fr-155" InMinimumRequirementSet="true" />
     <Language Code="fr-be" InMinimumRequirementSet="true" />
     <Language Code="fr-ca" InMinimumRequirementSet="true" />
     <Language Code="fr-cd" InMinimumRequirementSet="true" />
@@ -135,13 +146,10 @@
     <Language Code="fr-mc" InMinimumRequirementSet="true" />
     <Language Code="fr-ml" InMinimumRequirementSet="true" />
     <Language Code="fr-re" InMinimumRequirementSet="true" />
-    <Language Code="frc" InMinimumRequirementSet="true" />
     <Language Code="frc-latn" InMinimumRequirementSet="true" />
-    <Language Code="frp" InMinimumRequirementSet="true" />
     <Language Code="frp-latn" InMinimumRequirementSet="true" />
     <Language Code="ga" InMinimumRequirementSet="false" />
     <Language Code="ga-ie" InMinimumRequirementSet="false" />
-    <Language Code="gd" InMinimumRequirementSet="false" />
     <Language Code="gd-gb" InMinimumRequirementSet="false" />
     <Language Code="gd-latn" InMinimumRequirementSet="false" />
     <Language Code="gl" InMinimumRequirementSet="false" />
@@ -163,7 +171,6 @@
     <Language Code="hy-am" InMinimumRequirementSet="false" />
     <Language Code="id" InMinimumRequirementSet="true" />
     <Language Code="id-id" InMinimumRequirementSet="true" />
-    <Language Code="ig" InMinimumRequirementSet="false" />
     <Language Code="ig-latn" InMinimumRequirementSet="false" />
     <Language Code="ig-ng" InMinimumRequirementSet="false" />
     <Language Code="is" InMinimumRequirementSet="false" />
@@ -190,7 +197,6 @@
     <Language Code="kok-in" InMinimumRequirementSet="false" />
     <Language Code="ku-arab" InMinimumRequirementSet="false" />
     <Language Code="ku-arab-iq" InMinimumRequirementSet="false" />
-    <Language Code="ky" InMinimumRequirementSet="false" />
     <Language Code="ky-cyrl" InMinimumRequirementSet="false" />
     <Language Code="ky-kg" InMinimumRequirementSet="false" />
     <Language Code="lb" InMinimumRequirementSet="false" />
@@ -206,7 +212,6 @@
     <Language Code="mk-mk" InMinimumRequirementSet="false" />
     <Language Code="ml" InMinimumRequirementSet="false" />
     <Language Code="ml-in" InMinimumRequirementSet="false" />
-    <Language Code="mn" InMinimumRequirementSet="false" />
     <Language Code="mn-cyrl" InMinimumRequirementSet="false" />
     <Language Code="mn-mn" InMinimumRequirementSet="false" />
     <Language Code="mn-mong" InMinimumRequirementSet="false" />
@@ -246,9 +251,7 @@
     <Language Code="pt" InMinimumRequirementSet="true" />
     <Language Code="pt-br" InMinimumRequirementSet="true" />
     <Language Code="pt-pt" InMinimumRequirementSet="true" />
-    <Language Code="quc" InMinimumRequirementSet="false" />
     <Language Code="quc-latn" InMinimumRequirementSet="false" />
-    <Language Code="qut" InMinimumRequirementSet="false" />
     <Language Code="qut-gt" InMinimumRequirementSet="false" />
     <Language Code="qut-latn" InMinimumRequirementSet="false" />
     <Language Code="quz" InMinimumRequirementSet="false" />
@@ -272,7 +275,6 @@
     <Language Code="sl-si" InMinimumRequirementSet="true" />
     <Language Code="sq" InMinimumRequirementSet="false" />
     <Language Code="sq-al" InMinimumRequirementSet="false" />
-    <Language Code="sr" InMinimumRequirementSet="true" />
     <Language Code="sr-cyrl" InMinimumRequirementSet="false" />
     <Language Code="sr-cyrl-ba" InMinimumRequirementSet="false" />
     <Language Code="sr-cyrl-cs" InMinimumRequirementSet="false" />
@@ -300,22 +302,20 @@
     <Language Code="th-th" InMinimumRequirementSet="true" />
     <Language Code="ti" InMinimumRequirementSet="false" />
     <Language Code="ti-et" InMinimumRequirementSet="false" />
-    <Language Code="tk" InMinimumRequirementSet="false" />
     <Language Code="tk-cyrl" InMinimumRequirementSet="false" />
+    <Language Code="tk-cyrl-tr" InMinimumRequirementSet="false" />
     <Language Code="tk-latn" InMinimumRequirementSet="false" />
+    <Language Code="tk-latn-tr" InMinimumRequirementSet="false" />
     <Language Code="tk-tm" InMinimumRequirementSet="false" />
-    <Language Code="tk-tr" InMinimumRequirementSet="false" />
     <Language Code="tn" InMinimumRequirementSet="false" />
     <Language Code="tn-bw" InMinimumRequirementSet="false" />
     <Language Code="tn-za" InMinimumRequirementSet="false" />
     <Language Code="tr" InMinimumRequirementSet="true" />
     <Language Code="tr-tr" InMinimumRequirementSet="true" />
-    <Language Code="tt" InMinimumRequirementSet="false" />
     <Language Code="tt-arab" InMinimumRequirementSet="false" />
     <Language Code="tt-cyrl" InMinimumRequirementSet="false" />
     <Language Code="tt-latn" InMinimumRequirementSet="false" />
     <Language Code="tt-ru" InMinimumRequirementSet="false" />
-    <Language Code="ug" InMinimumRequirementSet="false" />
     <Language Code="ug-arab" InMinimumRequirementSet="false" />
     <Language Code="ug-cn" InMinimumRequirementSet="false" />
     <Language Code="ug-cyrl" InMinimumRequirementSet="false" />
@@ -333,7 +333,6 @@
     <Language Code="wo-sn" InMinimumRequirementSet="false" />
     <Language Code="xh" InMinimumRequirementSet="false" />
     <Language Code="xh-za" InMinimumRequirementSet="false" />
-    <Language Code="yo" InMinimumRequirementSet="false" />
     <Language Code="yo-latn" InMinimumRequirementSet="false" />
     <Language Code="yo-ng" InMinimumRequirementSet="false" />
     <Language Code="zh-cn" InMinimumRequirementSet="true" />
@@ -355,8 +354,22 @@
       <ReservedName>Flash Cards: Math</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
-  <AccountPackageIdentityNames>
-    <MainPackageIdentityName>27886WonderslugLabs.FlashCards-Math</MainPackageIdentityName>
-  </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/bc449a0d-b7c3-4a01-b898-ec774040f6f9" />
+  <AccountPackageIdentityNames />
+  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/bc449a0d-b7c3-4a01-b898-ec774040f6f9">
+    <PackageInfo>
+      <OsMinVersion>6.2.1.0</OsMinVersion>
+      <PackageArchitecture>arm</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.0.0.0</PackageMaxArchitectureVersion>
+    </PackageInfo>
+    <PackageInfo>
+      <OsMinVersion>6.2.1.0</OsMinVersion>
+      <PackageArchitecture>x86</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.0.0.0</PackageMaxArchitectureVersion>
+    </PackageInfo>
+    <PackageInfo>
+      <OsMinVersion>6.2.1.0</OsMinVersion>
+      <PackageArchitecture>x64</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.0.0.0</PackageMaxArchitectureVersion>
+    </PackageInfo>
+  </PackageInfoList>
 </StoreAssociation>
