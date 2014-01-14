@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Windows.UI.ApplicationSettings;
 using Caliburn.Micro;
 using FlashCards.Data;
 using FlashCards.Extensions;
@@ -33,6 +34,13 @@ namespace FlashCards
 
             _container = new WinRTContainer();
             _container.RegisterWinRTServices();
+            var settings = _container.RegisterSettingsService();
+
+            settings.RegisterFlyoutCommand<UserSettingsViewModel>("Children",
+                new Dictionary<string, object>
+                {
+                    {"ContentBackgroundBrush", new SolidColorBrush(Color.FromArgb(255, 50, 50, 50))}
+                });
 
             _container.RegisterPerRequest(typeof(IUserRepository),"", typeof(UserRepository));
             _container.RegisterPerRequest(typeof(IDeckRepository),"", typeof(DeckRepository));
@@ -47,16 +55,13 @@ namespace FlashCards
                       .PerRequest<ItemViewModel>()
                       .PerRequest<GroupViewModel>();
 
-            var settings = RegisterSettingsService();
+ 
 
-            settings.RegisterCommand<UserSettingsViewModel>("Children",
-                                                            new Dictionary<string, object>
-                                                                {
-                                                                    {"ContentBackgroundBrush", new SolidColorBrush(Color.FromArgb(255, 50, 50, 50))}
-                                                                });
+
 
 
             InitializeDatabase();
+
         }
 
         protected override object GetInstance(Type service, string key)
@@ -140,21 +145,6 @@ namespace FlashCards
             }
         }
 
-        // the next release of CM will make this unnecessary - we just need to plug in the
-        // updated CallistoWindowManager
-        private ISettingsService RegisterSettingsService()
-        {
-            if (_container.HasHandler(typeof(ISettingsService), null))
-                return (ISettingsService)GetInstance(typeof(ISettingsService), null);
-
-            if (!_container.HasHandler(typeof(ISettingsWindowManager), null))
-                _container.RegisterInstance(typeof(ISettingsWindowManager), null, new FlashCards.CallistoSettingsWindowManager());
-
-            var settingsService = new SettingsService((ISettingsWindowManager)GetInstance(typeof(ISettingsWindowManager), null));
-            _container.RegisterInstance(typeof(ISettingsService), null, settingsService);
-
-            return settingsService;
-        }
 
         protected override void PrepareViewFirst(Windows.UI.Xaml.Controls.Frame rootFrame)
         {

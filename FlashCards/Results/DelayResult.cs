@@ -12,7 +12,7 @@ namespace FlashCards.Results
             _milliseconds = milliseconds;
         }
 
-        public override async void Execute(ActionExecutionContext context)
+        public override async void Execute(CoroutineExecutionContext context)
         {
             await Task.Delay(_milliseconds);
 

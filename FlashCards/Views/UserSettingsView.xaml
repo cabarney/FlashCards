@@ -10,7 +10,7 @@
     d:DesignHeight="400"
     d:DesignWidth="272">
     
-    <Grid Width="272">
+    <Grid HorizontalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />

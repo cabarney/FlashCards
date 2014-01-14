@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>FlashCards_StoreKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>26E5BE82EBCFB622CECAD6E052B53769E1E5F04A</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>2570EDD4ABCF2BD80A2F316662B03BCEE39FEC39</PackageCertificateThumbprint>
     <ExpressionBlendVersion>5.0.30709.0</ExpressionBlendVersion>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
@@ -111,7 +111,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CallistoSettingsWindowManager.cs" />
     <Compile Include="Data\AnswerRepository.cs" />
     <Compile Include="Data\DeckRepository.cs" />
     <Compile Include="Data\IAnswerRepository.cs" />
@@ -151,6 +150,9 @@
     <Compile Include="Results\VisualStateResult.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="UserSettingsFlyout.xaml.cs">
+      <DependentUpon>UserSettingsFlyout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\AnswerState.cs" />
     <Compile Include="ViewModels\CardViewModel.cs" />
     <Compile Include="ViewModels\DeckViewModel.cs" />
@@ -236,6 +238,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="UserSettingsFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -274,17 +280,22 @@
     </SDKReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Caliburn.Micro, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Caliburn.Micro, Version=1.5.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\Caliburn.Micro.dll</HintPath>
     </Reference>
-    <Reference Include="Caliburn.Micro.Extensions, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Caliburn.Micro.Extensions, Version=1.5.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\Caliburn.Micro.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Callisto, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dependencies\Callisto.dll</HintPath>
+    <Reference Include="Caliburn.Micro.Platform">
+      <HintPath>..\Dependencies\Caliburn.Micro.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Interactions">
+      <HintPath>..\Dependencies\Microsoft.Xaml.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Interactivity">
+      <HintPath>..\Dependencies\Microsoft.Xaml.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="Windows.UI.Interactivity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=2f4cf195f2e6765d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

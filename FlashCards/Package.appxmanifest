@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="27886WonderslugLabs.FlashCardsMath" Publisher="CN=2AEC5012-F814-42E9-837C-47FAE285E2BF" Version="1.1.0.13" />
+  <Identity Name="27886WonderslugLabs.FlashCardsMath" Publisher="CN=2AEC5012-F814-42E9-837C-47FAE285E2BF" Version="1.1.0.15" />
   <Properties>
     <DisplayName>Flash Cards: Math</DisplayName>
     <PublisherDisplayName>Wonderslug Labs</PublisherDisplayName>

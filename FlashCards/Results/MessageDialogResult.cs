@@ -19,7 +19,7 @@ namespace FlashCards.Results
             _commands = commands;
         }
 
-        public async override void Execute(ActionExecutionContext context)
+        public async override void Execute(CoroutineExecutionContext context)
         {
             var dialog = new MessageDialog(_content, _title);
             if(_commands != null)

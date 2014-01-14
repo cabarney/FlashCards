@@ -59,7 +59,7 @@ namespace FlashCards.ViewModels
             else
                 yield return new ControlVisualStateResult("AnswerIncorrect", "_Answer" + idx, !_isTimed);
 
-            _events.Publish(new AnswerChosenMessage(answer));
+            _events.PublishOnUIThread(new AnswerChosenMessage(answer));
         }
     }
 }

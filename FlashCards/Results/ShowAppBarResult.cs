@@ -13,7 +13,7 @@ namespace FlashCards.Results
             _appBarName = appBarName;
         }
 
-        public override void Execute(ActionExecutionContext context)
+        public override void Execute(CoroutineExecutionContext context)
         {
             var view = (Control)context.View;
             var appBar = view.FindName(_appBarName);

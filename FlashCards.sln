@@ -9,8 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencie
 	ProjectSection(SolutionItems) = preProject
 		Dependencies\Caliburn.Micro.dll = Dependencies\Caliburn.Micro.dll
 		Dependencies\Caliburn.Micro.Extensions.dll = Dependencies\Caliburn.Micro.Extensions.dll
-		Dependencies\Callisto.dll = Dependencies\Callisto.dll
-		Dependencies\Windows.UI.Interactivity.dll = Dependencies\Windows.UI.Interactivity.dll
+		Dependencies\Caliburn.Micro.Platform.dll = Dependencies\Caliburn.Micro.Platform.dll
+		Dependencies\Microsoft.Xaml.Interactions.dll = Dependencies\Microsoft.Xaml.Interactions.dll
+		Dependencies\Microsoft.Xaml.Interactivity.dll = Dependencies\Microsoft.Xaml.Interactivity.dll
 	EndProjectSection
 EndProject
 Global

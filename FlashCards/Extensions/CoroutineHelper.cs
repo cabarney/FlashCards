@@ -12,9 +12,9 @@ namespace FlashCards.Extensions
         /// Execute a single coroutine;
         /// </summary>
         /// <param name="coroutine">The <see cref="Caliburn.Micro.IResult"/></param>
-        /// <param name="context">The <see cref="Caliburn.Micro.ActionExecutionContext"/></param>
+        /// <param name="context">The <see cref="Caliburn.Micro.CoroutineExecutionContext"/></param>
         public static void Coroutine(IResult coroutine,
-                                     ActionExecutionContext context = null)
+                                     CoroutineExecutionContext context = null)
         {
             Coroutine(new[] {coroutine}, context);
         }
@@ -23,9 +23,9 @@ namespace FlashCards.Extensions
         /// Execute a enumeration of coroutines.
         /// </summary>
         /// <param name="coroutines">The <see cref="IEnumerator&lt;IResult&gt;"/></param>
-        /// <param name="context">The <see cref="Caliburn.Micro.ActionExecutionContext"/></param>
+        /// <param name="context">The <see cref="Caliburn.Micro.CoroutineExecutionContext"/></param>
         public static void Coroutine(IEnumerator<IResult> coroutines,
-                                     ActionExecutionContext context = null)
+                                     CoroutineExecutionContext context = null)
         {
             if (context == null)
                 Caliburn.Micro.Coroutine.BeginExecute(coroutines);
@@ -37,9 +37,9 @@ namespace FlashCards.Extensions
         /// Execute an enumerable of coroutines
         /// </summary>
         /// <param name="coroutines">The <see cref="IEnumerable&lt;IResult&gt;"/></param>
-        /// <param name="context">The <see cref="ActionExecutionContext"/></param>
+        /// <param name="context">The <see cref="CoroutineExecutionContext"/></param>
         public static void Coroutine(IEnumerable<IResult> coroutines,
-                                     ActionExecutionContext context = null)
+                                     CoroutineExecutionContext context = null)
         {
             Coroutine(coroutines.GetEnumerator(), context);
         }

@@ -26,7 +26,7 @@ namespace FlashCards.Results
             get { return _useTransitions; }
         }
 
-        public override void Execute(ActionExecutionContext context)
+        public override void Execute(CoroutineExecutionContext context)
         {
             if (!(context.View is Control))
                 throw new InvalidOperationException("View must be a Control to use VisualStateResult");

@@ -5,6 +5,8 @@ namespace FlashCards.Results
 {
     public abstract class ResultBase : IResult
     {
+        public abstract void Execute(CoroutineExecutionContext context);
+
         public event EventHandler<ResultCompletionEventArgs> Completed = delegate { };
 
         protected virtual void OnCompleted()
@@ -32,7 +34,5 @@ namespace FlashCards.Results
         {
             Caliburn.Micro.Execute.OnUIThread(() => Completed(this, e));
         }
-
-        public abstract void Execute(ActionExecutionContext context);
     }
 }

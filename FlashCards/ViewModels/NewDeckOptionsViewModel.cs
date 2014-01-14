@@ -39,7 +39,7 @@ namespace FlashCards.ViewModels
             set
             {
                 _deck.CardCount = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>SelectedCardCount);
             }
         }
 
@@ -50,7 +50,7 @@ namespace FlashCards.ViewModels
             {
                 if (value.Equals(_addition)) return;
                 _addition = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>Addition);
                 SetOperationValues();
             }
         }
@@ -62,7 +62,7 @@ namespace FlashCards.ViewModels
             {
                 if (value.Equals(_subtraction)) return;
                 _subtraction = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>Subtraction);
                 SetOperationValues();
             }
         }
@@ -74,7 +74,7 @@ namespace FlashCards.ViewModels
             {
                 if (value.Equals(_multiplication)) return;
                 _multiplication = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>Multiplication);
                 SetOperationValues();
             }
         }
@@ -86,7 +86,7 @@ namespace FlashCards.ViewModels
             {
                 if (value.Equals(_division)) return;
                 _division = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>Division);
                 SetOperationValues();
             }
         }
@@ -98,7 +98,7 @@ namespace FlashCards.ViewModels
             {
                 if (value.Equals(_focusOnTroubleSpots)) return;
                 _focusOnTroubleSpots = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>FocusOnTroubleSpots);
                 SetOperationValues();
             }
         }
@@ -197,7 +197,7 @@ namespace FlashCards.ViewModels
             set
             {
                 _deck.TimeLimit = value * 60 + SelectedSecondOption;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>SelectedMinuteOption);
             }
         }
 
@@ -213,7 +213,7 @@ namespace FlashCards.ViewModels
                 }
                 else
                     _deck.TimeLimit = SelectedMinuteOption * 60 + value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>SelectedSecondOption);
             }
         }
 
@@ -223,7 +223,7 @@ namespace FlashCards.ViewModels
             set
             {
                 _deck.PresetOnly = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>SaveAsPreset);
 
                 if (SaveAsPreset && string.IsNullOrWhiteSpace(PresetName))
                     PresetName = "New Preset";
@@ -236,7 +236,7 @@ namespace FlashCards.ViewModels
             set
             {
                 _deck.PresetName = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>PresetName);
             }
         }
 

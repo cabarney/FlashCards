@@ -35,7 +35,7 @@ namespace FlashCards.ViewModels
             {
                 if (Equals(value, _selectedUser)) return;
                 _selectedUser = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(() => ExistingUsers);
                 NotifyOfPropertyChange(() => CanDeleteUser);
             }
         }
@@ -52,7 +52,7 @@ namespace FlashCards.ViewModels
             {
                 if (value == _newUserName) return;
                 _newUserName = value;
-                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(()=>NewUserName);
                 //NotifyOfPropertyChange(()=>CanAddUser);
             }
         }
@@ -95,7 +95,7 @@ namespace FlashCards.ViewModels
             ErrorMessage = "";
             ErrorShown = false;
 
-            _events.Publish(new AddUserMessage(user.Id));
+            _events.PublishOnUIThread(new AddUserMessage(user.Id));
         }
 
         public string ErrorMessage
@@ -148,7 +148,7 @@ namespace FlashCards.ViewModels
                 }
             }
             SelectedUser = null;
-            _events.Publish(new RemoveUserMessage(userId));
+            _events.PublishOnUIThread(new RemoveUserMessage(userId));
         }
 
         public bool CanDeleteUser
